@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bid.css">
+    <title>hacajaka</title>
+</head>
+<body>
+
+    <nav>
+        <div class="banner">
+            <h1>Hacajaka 2023 Auctions <span>2nd Edition, Online</span></h1>
+        </div>
+
+        <ul class="menu">
+            <li><a href="./index.html" target="_blank">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./bid.html" target="_blank">Biddings</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+        <fieldset>
+            <legend>
+             <h1>
+                 <label for="fname">
+                 Make A Bid
+             </label>
+             </h1>
+            </legend>
+        
+            <form onsubmit="sendEmail(); reset(); return false" method="post">
+              <div class="field">
+
+                <label for="fname">First name:
+                </label><br>
+                <input type="text" id="fname" name="First_name" required><br><br>
+        
+                <label for="lname">Last name:
+                </label><br>
+                <input type="text" id="lname" name="Last_name" required><br><br>
+        
+                <label for="email">Email address:                    
+                </label><br>
+                <input type="text" id="email" name="email" required><br><br>
+        
+                <label for="phone">Phone no.:                    
+                </label><br>
+                <input type="text" id="phone" name="email" required><br><br>        
+                        
+                <label for="pname">Product name:
+                </label><br>
+                <input type="text" id="pname" name="Product_name" required> <br><br>  
+
+                <label for="offer">Bid Offer:
+                </label><br>
+                <input type="text" id="offer" name="Product_name" value="$" required> <br><br>        
+                
+                <div class="button"><button id="butt" type="submit">Submit</button></div>
+              </div>
+                </form>
+              </fieldset>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "ananiabraham5@gmail.com",
+                password: "Aa0245300733",
+                To: "ananiabraham5@gmail.com",
+                From: document.getElementById("email").value,
+                Subject: "BID OFFER",
+                Body: "First_name: " + document.getElementById("fname").value
+                    + "<br> Last_name: " + document.getElementById("lname").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone: " + document.getElementById("phone").value
+                    + "<br> Bid_offer: " + document.getElementById("offer").value
+
+            }).then(
+                message => alert("Bid Submitted Successfully")
+            )
+        }
+    </script>
+</body>
+</html>
