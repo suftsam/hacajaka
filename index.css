@@ -10,15 +10,16 @@ body {
 
 nav {
   position: relative;
-  height: 10vh;
+  height: 12vh;
   width: 100%;
   padding: 4px;
   background-color: rgb(35, 9, 76);
   box-shadow: 0 0 20px #f4509f;
-  /* z-index: 1; */
 }
 .banner h1{
     color: white;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .banner span{
@@ -44,7 +45,7 @@ nav .menu li{
 nav .menu li a{
   text-decoration: none;
   color: white;
-  padding: 4px;
+  padding: 2px;
   border-radius: 4px;
   transition: .3s linear;
 }
@@ -54,7 +55,7 @@ nav .menu li a:hover{
 }
 
 main {
-  height: 90vh;
+  height: 88vh;
   width: 100%;
   padding: 4px;
   background: blueviolet;
@@ -79,6 +80,9 @@ main {
   margin: 5px auto;
   color: white;
   font-weight: 600;
+  position: absolute;
+  left: 5px;
+  bottom: 2px;
 
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -111,17 +115,18 @@ main {
 
 .product-img .description{
   margin: 0 auto;
+  padding-bottom: 5px;
   border-radius: 5px;
   width: 90%;
   opacity: 0;
+  transform: translateY(-105%);
   transition: .5s linear;
 }
 
 .product-img:hover .description{  
   opacity: 1;
-  transform: translateY(-108%);
   color: white;
-  padding-left: 10px;
+  padding-left: 5px;
   background: #00000099;
 }
 
@@ -144,15 +149,19 @@ main {
   main{
     display: flex;
     flex-wrap: wrap;
-    /* overflow-y: scroll; */
   }
 
   .product-box{
     margin: 5px auto;
   }
 
-  .product-box:hover .description{  
+  .product-img .description{
+    width: 98%;
+    padding: 2px;
+  }  
+
+  .product-img:hover .description{  
     opacity: 1;
-    transform: translateY(-106%);
+    transform: translateY(-104%);
   }
 }

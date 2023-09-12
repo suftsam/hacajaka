@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+  }
+  body {
+    overflow: hidden;
+  }
+  
+  nav {
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    padding: 4px;
+    background-color: rgb(35, 9, 76);
+    box-shadow: 0 0 20px #f4509f;
+  }
+  .banner h1{
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+  }
+  
+  .banner span{
+      font-weight: 400;
+      font-size: 18px;
+      font-style: italic;
+      font-family: 'Times New Roman', Times, serif;
+  }
+  
+  nav .menu{
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    display: flex;
+    color: white;
+  }
+  
+  nav .menu li{
+    list-style: none;
+    margin: 0 10px;
+  }
+  
+  nav .menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    border-radius: 4px;
+    transition: .3s linear;
+  }
+  
+  nav .menu li a:hover{
+    background: #f4509f;
+  }
+
+
+  main {
+    height: 85vh;
+    width: 60%;
+    padding: 4px;
+    background: white;
+    border: 1px solid #00000083;
+    border-radius: 5px;
+    margin: 10px auto;
+  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 5px; */
+    overflow-y: scroll;
+  }
+
+  .item1{
+    display: block;
+    text-align: center;
+    width: 90%;
+    padding-top: 70px;
+  }
+
+
+  .item1 h2{
+    color: red;
+  }
+
+  h3{
+    text-align: center;
+    border-top: 1px solid black;
+  }
+
+  .wrap{
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+
+  .wrapper{
+    background: #23094c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    padding: 4px;
+    border-radius: 5px;
+  }
+
+  .wrapper .qrcode{
+    width: 45%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 2px;
+
+  }
+
+  .wrapper .qrcode img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+  }
+
+@media(max-width: 768px){
+
+  main{
+    width: 98%;
+  }
+
+  .item1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4px;
+  }
+  .item1 h1{
+    font-size: 30px;
+  }
+  .item1 h2{
+    text-align: center;
+  }
+  .wrapper{
+    height: 20vh;
+  }
+}

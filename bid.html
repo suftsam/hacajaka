@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bid.css">
-    <title>hacajaka</title>
+    <title>Pinnacle Art Center</title>
 </head>
 <body>
 
     <nav>
         <div class="banner">
-            <h1>Hacajaka 2023 Auctions <span>2nd Edition, Online</span></h1>
+            <h1>Pinnacle Art Center | Silent Art  Auction <span>2nd Edition, Online</span></h1>
         </div>
 
         <ul class="menu">
-            <li><a href="./index.html" target="_blank">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="./bid.html" target="_blank">Biddings</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="tel:+233551660077 ">Contact</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#./bid.html">Biddings</a></li>
         </ul>
     </nav>
-
 
 
     <div class="container">
@@ -46,19 +45,19 @@
         
                 <label for="email">Email address:                    
                 </label><br>
-                <input type="text" id="email" name="email" required><br><br>
+                <input type="text" id="email" name="Email" required><br><br>
         
                 <label for="phone">Phone no.:                    
                 </label><br>
-                <input type="text" id="phone" name="email" required><br><br>        
+                <input type="text" id="phone" name="Phone" required><br><br>        
                         
-                <label for="pname">Product name:
+                <label for="pname">Artwork:
                 </label><br>
-                <input type="text" id="pname" name="Product_name" required> <br><br>  
+                <input type="text" id="artwork" name="Artwork" required> <br><br>  
 
                 <label for="offer">Bid Offer:
                 </label><br>
-                <input type="text" id="offer" name="Product_name" value="$" required> <br><br>        
+                <input type="text" id="offer" name="Bid_offer" value="$" required> <br><br>        
                 
                 <div class="button"><button id="butt" type="submit">Submit</button></div>
               </div>
@@ -70,9 +69,9 @@
     <script>
         function sendEmail(){
             Email.send({
-                Host: "smtp.gmail.com",
+                Host: "smtp.elasticemail.com",
                 Username: "ananiabraham5@gmail.com",
-                password: "Aa0245300733",
+                password: "90B5FA514B8E04282BF284E303B689457C9E",
                 To: "ananiabraham5@gmail.com",
                 From: document.getElementById("email").value,
                 Subject: "BID OFFER",
@@ -80,6 +79,7 @@
                     + "<br> Last_name: " + document.getElementById("lname").value
                     + "<br> Email: " + document.getElementById("email").value
                     + "<br> Phone: " + document.getElementById("phone").value
+                    + "<br> Artwork: " + document.getElementById("artwork").value
                     + "<br> Bid_offer: " + document.getElementById("offer").value
 
             }).then(
